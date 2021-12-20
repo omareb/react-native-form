@@ -140,6 +140,10 @@ export interface MultiLineTextFieldProps extends DescriptionProps, MultiLineText
 }
 
 /* PhotoField */
+export interface ImageComponentProps {
+    thumbnailWidth?: number;
+    thumbnailHeight?: number;
+}
 export interface PhotoFieldStyles extends CommonStyles {
     imagesContainerStyle?: StyleProp<ViewStyle>;
     imageContainerStyle?: StyleProp<ViewStyle>;
@@ -155,6 +159,7 @@ export interface PhotoFieldProps extends DescriptionProps, PhotoFieldStyles {
     isValid?: Nullable<boolean>;
     onPressPicture?: (index: number) => void;
     openCameraButton: React.ReactNode;
+    imageComponent?: (uri: string, style?: StyleProp<any>) => React.ReactNode;
 }
 
 /* PickerField */
