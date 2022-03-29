@@ -88,11 +88,15 @@ function DescriptionPictures(props: DescriptionPicturesProps) {
                         <TouchableHighlight
                             key={uri}
                             onPress={() => {
-                                setDisplayViewer(true);
-                                setViewerIndex(index);
-                                onPressPicture && onPressPicture(index);
+                                if (ImageViewer) {
+                                    setDisplayViewer(true);
+                                    setViewerIndex(index);
+                                }
+                                if (onPressPicture) {
+                                    onPressPicture(index);
+                                }
                             }}
-                            disabled={!ImageViewer}
+                            disabled={!ImageViewer && !onPressPicture}
                         >
                             <Image
                                 source={{ uri }}
