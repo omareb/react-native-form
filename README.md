@@ -217,7 +217,7 @@ A TextInput with a nice animation on focus/blur
 You can run a simple example present in the module to test the form. First, you need to install node_modules and example pods:
 
 ```bash
-yarn && cd example/ios/ && pod install && cd .. && yarn start
+yarn && cd example/ios/ && pod install && cd .. && yarn && yarn start
 ```
 
 Then, open the example directory with xcode or android studio to build the example.
