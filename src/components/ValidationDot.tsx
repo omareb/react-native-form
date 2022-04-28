@@ -25,9 +25,7 @@ function ValidationDot(props: Props) {
 
     return (
         <View style={[styles.validationDot, customBackgroundStyle, props.style]}>
-            <Text style={[styles.labelStyle, props.validLabelStyle]}>
-                {props?.validLabel}
-            </Text>
+            <Text style={[styles.labelStyle, props.validLabelStyle]}>{props?.validLabel}</Text>
         </View>
     );
 }
