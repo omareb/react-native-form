@@ -104,6 +104,8 @@ export interface MCQFieldProps extends DescriptionProps, MCQFieldStyles {
     possibleAnswers: string[];
     selectedAnswersIndices: number[];
     isValid?: Nullable<boolean>;
+    validLabelStyle?: StyleProp<ViewStyle>;
+    validLabel?: string;
     onSelectAnswer: (answerIndex: number) => void;
     foldable?: boolean;
     openFoldableLabel?: string;

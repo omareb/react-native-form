@@ -26,6 +26,10 @@ export default StyleSheet.create({
         fontSize: 14,
         color: baseColors.label,
     },
+    labelStyle: {
+        fontSize: 9,
+        color: '#fff'
+    },
     validationDot: {
         alignSelf: 'center',
         height: 10,

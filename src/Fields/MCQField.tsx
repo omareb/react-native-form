@@ -134,7 +134,13 @@ function MCQField(props: MCQFieldProps) {
                     </Text>
                 )}
                 {!props.foldable && (
-                    <ValidationDot isValid={props.isValid} style={props.validationDotStyle} colors={props.colors} />
+                    <ValidationDot
+                        isValid={props.isValid}
+                        style={props.validationDotStyle}
+                        colors={props.colors}
+                        validLabel={props.validLabel}
+                        validLabelStyle={props.validLabelStyle}
+                    />
                 )}
             </View>
 
@@ -184,8 +190,10 @@ function MCQField(props: MCQFieldProps) {
                         {openFoldableIcon && renderOpenFoldableIcon(openFoldableIcon)}
                         <ValidationDot
                             isValid={props.isValid}
-                            style={{ position: 'absolute', right: 35 }}
+                            style={[{ position: 'absolute', right: 35 }, props.validationDotStyle]}
                             colors={props.colors}
+                            validLabel={props.validLabel}
+                            validLabelStyle={props.validLabelStyle}
                         />
                     </TouchableOpacity>
 
